@@ -29,5 +29,6 @@ script:
   - mkdir build
   - cd build
   - cmake ..
-  - cppcheck -q --enable=all --inconclusive ../src
-  - valgrind --tool=memcheck --leak-check=summary ./tests
+  - ls
+  - cppcheck -q --enable=all ../src
+  - valgrind --tool=memcheck --leak-check=full ./tests
