@@ -16,9 +16,9 @@ addons:
       - valgrind
       - cppcheck
       - cmake
+      - libgtest-dev
 
 install:
-  - sudo apt-get install libgtest-dev
   - cd /usr/src/gtest
   - sudo cmake CMakeLists.txt
   - sudo make
