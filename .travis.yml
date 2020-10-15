@@ -16,8 +16,8 @@ addons:
       - valgrind
       - cppcheck
 
-script:
-  - sudo apt-get install -y libgtest-dev
+install:
+  - sudo apt-get install libgtest-dev
   - cd /usr/src/gtest
   - sudo cmake CMakeLists.txt
   - sudo make
@@ -25,5 +25,7 @@ script:
   - mkdir build
   - cd build
   - cmake ..
+
+script:
   - cppcheck -q --enable=all --inconclusive ../src
   - valgrind --tool=memcheck --leak-check=summary ./tests
