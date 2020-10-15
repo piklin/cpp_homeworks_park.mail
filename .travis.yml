@@ -18,15 +18,12 @@ addons:
       - cmake
 
 install:
-  - pwd
   - sudo apt-get install libgtest-dev
   - cd /usr/src/gtest
   - sudo cmake CMakeLists.txt
   - sudo make
   - sudo cp *.a /usr/lib
-  - cd ~
-  - ls
-  - pwd
+  - cd /home/travis/build/piklin/cpp_homeworks_park.mail
 
 script:
   - mkdir build
