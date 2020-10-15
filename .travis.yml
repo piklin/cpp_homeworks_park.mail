@@ -1,0 +1,32 @@
+dist: trusty
+sudo: required
+
+language: c
+
+os:
+  - linux
+
+compiler:
+  - gcc
+
+addons:
+  apt:
+    update: true
+    packages:
+      - valgrind
+      - cppcheck
+
+script:
+  - mkdir build
+  - cd build
+  - cmake ..
+
+
+
+
+
+
+
+
+
+  cppcheck -q --enable=all --inconclusive ./srcсзз
