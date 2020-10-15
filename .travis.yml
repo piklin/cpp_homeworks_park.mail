@@ -19,14 +19,14 @@ addons:
 install:
   - sudo apt-get install libgtest-dev
   - cd /usr/src/gtest
-  - ls
   - sudo cmake CMakeLists.txt
   - sudo make
-  - sudo make install
+  - sudo cp *.a /usr/lib
+  - cd ~
+
+script:
   - mkdir build
   - cd build
   - cmake ..
-
-script:
   - cppcheck -q --enable=all --inconclusive ../src
   - valgrind --tool=memcheck --leak-check=summary ./tests
