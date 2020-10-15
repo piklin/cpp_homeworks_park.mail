@@ -1,7 +1,7 @@
 dist:     trusty
 sudo:     required
 
-language: cpp
+language: c
 
 os:
   - linux
@@ -17,8 +17,13 @@ addons:
       - cppcheck
 
 script:
+  - sudo apt-get install -y libgtest-dev
+  - cd /usr/src/gtest
+  - sudo cmake .
+  - sudo make
+  - sudo make install
   - mkdir build
   - cd build
   - cmake ..
-  - cppcheck -q --enable=all --inconclusive ./src
+  - cppcheck -q --enable=all --inconclusive ../src
   - valgrind --tool=memcheck --leak-check=summary ./tests
