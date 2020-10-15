@@ -20,7 +20,10 @@ script:
   - mkdir build
   - cd build
   - cmake ..
+<<<<<<< HEAD
   - valgrind --tool=memcheck --leak-check=summary ./tests
+=======
+>>>>>>> origin/make-hw1
 
 
 
