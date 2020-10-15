@@ -14,6 +14,3 @@ find_package(GTest REQUIRED)
 target_include_directories(tests PUBLIC ${GTEST_INCLUDE_DIRS})
 target_link_libraries(tests PUBLIC ${GTEST_LIBRARIES})
 target_include_directories(tests PUBLIC include)
-
-
-add_executable(prob lol.c)
