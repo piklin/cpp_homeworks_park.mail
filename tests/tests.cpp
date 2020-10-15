@@ -9,10 +9,10 @@ extern "C" {
 
 std::string path;
 
-bool isEqualFiles(const std::string file1, const std::string file2) {
+bool isEqualFiles(const std::string &file1, const std::string &file2) {
     std::ifstream fin1(file1);
     std::ifstream fin2(file2);
-    if (fin2 && fin2) {
+    if (fin1 && fin2) {
         char ch1, ch2;
         while (fin1.get(ch1) && fin2.get(ch2)) {
             if (ch1 != ch2) {
