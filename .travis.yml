@@ -1,7 +1,7 @@
-dist: trusty
-sudo: required
+dist:     trusty
+sudo:     required
 
-language: c
+language: cpp
 
 os:
   - linux
@@ -20,17 +20,5 @@ script:
   - mkdir build
   - cd build
   - cmake ..
-<<<<<<< HEAD
+  - cppcheck -q --enable=all --inconclusive ./src
   - valgrind --tool=memcheck --leak-check=summary ./tests
-=======
->>>>>>> origin/make-hw1
-
-
-
-
-
-
-
-
-
-  cppcheck -q --enable=all --inconclusive ./srcсзз
