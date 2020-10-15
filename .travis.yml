@@ -22,7 +22,7 @@ install:
   - cd /usr/src/gtest
   - sudo cmake CMakeLists.txt
   - sudo make
-  - sudo cp *.a /usr/lib
+  - sudo make install
   - cd /home/travis/build/piklin/cpp_homeworks_park.mail
 
 script:
@@ -30,6 +30,5 @@ script:
   - cd build
   - cmake ..
   - make
-  - ls
   - cppcheck -q --enable=all ../src
   - valgrind --tool=memcheck --leak-check=full ./tests
