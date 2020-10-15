@@ -15,6 +15,7 @@ addons:
     packages:
       - valgrind
       - cppcheck
+      - cmake
 
 script:
   - mkdir build
