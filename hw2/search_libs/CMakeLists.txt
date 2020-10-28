@@ -7,3 +7,11 @@ include_directories(${COMMON_INCLUDE})
 
 add_subdirectory(parallel_search_lib)
 add_subdirectory(sequential_search_lib)
+
+
+#тестирование общих функций библиотеки
+add_executable(common_files_tests ${COMMON_SRC}/for_searchers.c)
+target_include_directories(common_files_tests PRIVATE ${COMMON_INCLUDE})
+find_package(GTest REQUIRED)
+target_include_directories(common_files_tests PUBLIC ${GTEST_INCLUDE_DIRS})
+target_link_libraries(common_files_tests ${GTEST_LIBRARIES} pthread)
