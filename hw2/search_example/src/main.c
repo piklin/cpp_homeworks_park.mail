@@ -4,11 +4,15 @@
 
 #include "interface.h"
 
+int comp(ssize_t first, ssize_t second);
+
+int comp(ssize_t first, ssize_t second) {
+    return first < second;
+}
+
 int main() {
-    /*ssize_t a[10] = {3, 5, 2, -1, 5, 0, -1, 5, 8, 3};
-    size_t start;
-    size_t len;
-    finding_maximum_sequence(a, 10, &start, &len, comp);
-    printf("len = %zu, start = %zu\n", len, start);*/
+    size_t seq = 0;
+    finding_maximum_sequence_in_rand_array(2000000000, &seq, comp);
+    printf("%zu\n", seq);
     return 0;
 }
