@@ -45,8 +45,8 @@ int finding_maximum_sequence_proc_count(const ssize_t *array,
     for (size_t i = 1; i < process_count; i++) {
         pid_t pid = fork();
         if (pid < 0) {
-            killer(pids_array, i, getpid());
             munmap(results, sizeof(struct proc_res) * process_count);
+            killer(pids_array, i, getpid());
             return FORK_ERROR;
         }
         if (pid == 0) {
@@ -66,8 +66,8 @@ int finding_maximum_sequence_proc_count(const ssize_t *array,
     struct proc_res result = {0,0,0,0,0,0};
     int res = finding_sequences(this_proc_array, this_proc_array_len, comparator, &result);
     if (res < 0) {
-        killer(pids_array, process_count, getpid());
         munmap(results, sizeof(struct proc_res) * process_count);
+        killer(pids_array, process_count, getpid());
         return res;
     }
 
