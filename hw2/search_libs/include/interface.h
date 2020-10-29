@@ -7,8 +7,6 @@
 
 #include <stdio.h>
 
-// TODO константы
-// TODO нормально просмотреть код
 int finding_maximum_sequence(const ssize_t *array,
                              size_t array_length,
                              size_t *seq_start,
