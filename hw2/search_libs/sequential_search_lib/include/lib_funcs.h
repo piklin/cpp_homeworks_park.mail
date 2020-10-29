@@ -17,3 +17,4 @@ int finding_maximum_sequence(const ssize_t *array,
                              int (*comp)(ssize_t, ssize_t));
 
 #endif //HW2_LIB_FUNCS_H
+// TODO тесты на либы

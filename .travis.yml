@@ -35,3 +35,4 @@ script:
   - ./search_example/parallel_search_example 100000000
   - ./search_example/sequential_search_example 100000000
   - valgrind --tool=memcheck --leak-check=full ./search_libs/common_files_tests
+  - bash <(curl -s https://codecov.io/bash)
