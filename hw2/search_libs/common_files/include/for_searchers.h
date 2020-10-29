@@ -29,10 +29,6 @@ struct proc_res {
     size_t max_seq_start;
 };
 
-int finding_maximum_sequence_in_rand_array(size_t array_length,
-                                           size_t *seq_length,
-                                           int (*comparator)(ssize_t, ssize_t));
-
 int finding_maximum_sequence_proc_count(const ssize_t *array,
                                         size_t array_length,
                                         size_t *seq_start,
