@@ -24,10 +24,8 @@ install:
   - sudo make
   - sudo cp *.a /usr/lib
   - cd /home/travis/build/piklin/cpp_homeworks_park.mail/hw2/
-  - cppcheck -q --enable=all -inconclusive ./search_libs/common_files/src
-  - cppcheck -q --enable=all -inconclusive ./search_libs/parallel_search_lib/src
-  - cppcheck -q --enable=all -inconclusive ./search_libs/sequential_search_lib/src
-  - cppcheck -q --enable=all -inconclusive ./search_libs/tests
+  - cppcheck -q --enable=all -inconclusive ./search_libs
+  - cppcheck -q --enable=all -inconclusive ./search_example
 
 script:
   - mkdir build

@@ -1,5 +1,5 @@
 project(hw2)
-cmake_minimum_required(VERSION 3.17)
+cmake_minimum_required(VERSION 3.9)
 
 set(ROOT_CMAKE_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 

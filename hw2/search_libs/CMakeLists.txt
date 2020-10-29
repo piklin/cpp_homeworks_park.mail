@@ -14,6 +14,7 @@ add_subdirectory(sequential_search_lib)
 
 #тестирование общих функций библиотеки
 set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Werror -Wpedantic -ftest-coverage")
 
 add_executable(common_files_tests tests/common_files_tests.cpp common_files/src/for_searchers.c)
 target_include_directories(common_files_tests PRIVATE ${COMMON_INCLUDE})
