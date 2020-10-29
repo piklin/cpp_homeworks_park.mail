@@ -13,6 +13,9 @@ add_subdirectory(sequential_search_lib)
 
 
 #тестирование общих функций библиотеки
+set(CMAKE_C_STANDARD 99)
+set(CMAKE_C_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Werror -Wpedantic -ftest-coverage")
+
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Werror -Wpedantic -ftest-coverage")
 
