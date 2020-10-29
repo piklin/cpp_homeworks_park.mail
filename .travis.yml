@@ -23,14 +23,17 @@ install:
   - sudo cmake CMakeLists.txt
   - sudo make
   - sudo cp *.a /usr/lib
-  - cd /home/travis/build/piklin/cpp_homeworks_park.mail
+  - cd /home/travis/build/piklin/cpp_homeworks_park.mail/hw2/
+  - cppcheck -q --enable=all -inconclusive ./search_libs/common_files/src
+  - cppcheck -q --enable=all -inconclusive ./search_libs/parallel_search_lib/src
+  - cppcheck -q --enable=all -inconclusive ./search_libs/sequential_search_lib/src
+  - cppcheck -q --enable=all -inconclusive ./search_libs/tests
 
 script:
   - mkdir build
   - cd build
   - cmake ..
   - cmake --build .
-  - cppcheck -q --enable=all ../src
   - ./search_example/parallel_search_example 100000000
   - ./search_example/sequential_search_example 100000000
   - valgrind --tool=memcheck --leak-check=full ./search_libs/common_files_tests
