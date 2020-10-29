@@ -63,7 +63,7 @@ int finding_maximum_sequence_proc_count(const ssize_t *array,
     } else {
         this_proc_array_len = proc_len;
     }
-    struct proc_res result = {};
+    struct proc_res result = {0,0,0,0,0,0};
     int res = finding_sequences(this_proc_array, this_proc_array_len, comparator, &result);
     if (res < 0) {
         killer(pids_array, process_count, getpid());
