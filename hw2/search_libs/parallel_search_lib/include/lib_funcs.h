@@ -9,7 +9,7 @@
 #include "for_searchers.h"
 
 #include <stdio.h>
-#include <sys/sysinfo.h>
+//#include <sys/sysinfo.h>
 
 int finding_maximum_sequence(const ssize_t *array,
                              size_t array_length,

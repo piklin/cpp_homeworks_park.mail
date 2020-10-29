@@ -39,6 +39,7 @@ int testing_algorithm(ssize_t len, clock_t *time) {
     clock_t start = clock();
     int res = finding_maximum_sequence(array, len, &seq_start, &seq_len, comp);
     if (res < 0) {
+        free(array);
         return res;
     }
     clock_t stop = clock();
