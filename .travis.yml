@@ -35,5 +35,6 @@ script:
   - ./search_example/parallel_search_example 100000000
   - ./search_example/sequential_search_example 100000000
   - valgrind --tool=memcheck --leak-check=full ./search_libs/common_files_tests
-  - gcov ./search_libs/common_files_tests
+  - valgrind --tool=memcheck --leak-check=full ./search_libs/sequential_search_lib/sequential_lib_tests
+  - valgrind --tool=memcheck --leak-check=full ./search_libs/parallel_search_lib/parallel_lib_tests
   - bash <(curl -s https://codecov.io/bash)

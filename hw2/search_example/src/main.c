@@ -61,7 +61,7 @@ int main(int argc, char **argv) {
     if (res < 0) {
         return EXIT_FAILURE;
     }
-    printf("working time %zu\n", time);
+    printf("\n-----\nworking time %zu\n-----\n", time);
 
     return EXIT_SUCCESS;
 }
